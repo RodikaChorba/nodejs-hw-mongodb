@@ -1,7 +1,6 @@
 import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
-import helmet from 'helmet';
 import { env } from './utils/env.js';
 import { getAllContacts, getContactById } from './services/contacts.js';
 
@@ -12,7 +11,6 @@ export const setupServer = () => {
 
   app.use(express.json());
   app.use(cors());
-  app.use(helmet());
   app.use(
     pino({
       transport: {
