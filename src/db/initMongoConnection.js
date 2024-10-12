@@ -8,7 +8,6 @@ export const initMongoConnection = async () => {
     const url = env('MONGODB_URL');
     const db = env('MONGODB_DB');
 
-    // const mongoUri = `mongodb://${user}:${pwd}@${url}/${db}`;
     const mongoUri = `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority`;
     await mongoose.connect(mongoUri);
 
