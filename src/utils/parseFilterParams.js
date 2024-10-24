@@ -19,13 +19,14 @@ const parseStatus = (isFavourite) => {
 };
 
 export const parseFilterParams = (query = {}) => {
-  const { type, isFavourite } = query;
+  const { contactType, isFavourite } = query;
 
-  const parsedType = parseType(type);
+  const parsedType = parseType(contactType);
   const parsedStatus = parseStatus(isFavourite);
 
-  return {
-    type: parsedType,
-    isFavourite: parsedStatus,
-  };
+  const filter = {};
+  if (parsedType) filter.contactType = parsedType;
+  if (parsedStatus !== undefined) filter.isFavourite = parsedStatus;
+
+  return filter;
 };
