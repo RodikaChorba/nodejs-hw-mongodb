@@ -7,7 +7,7 @@ import createHttpError from 'http-errors';
 import { FIFTEEN_MINUTES, THIRTY_DAYS } from '../constants/index.js';
 import { SessionsCollection } from '../db/models/session.js';
 
-// import jwt from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
 import { SMTP } from '../constants/index.js';
 import { env } from '../utils/env.js';
