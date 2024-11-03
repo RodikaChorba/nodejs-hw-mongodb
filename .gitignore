@@ -1,7 +1,7 @@
 /node_modules
 cspell.json
 .env
-
+src/tmp/*
 .vscode
 .DS_Store
 .idea
