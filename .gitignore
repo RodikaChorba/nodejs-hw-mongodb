@@ -2,6 +2,7 @@
 cspell.json
 .env
 src/tmp/*
+!src/temp/.gitkeep
 .vscode
 .DS_Store
 .idea
