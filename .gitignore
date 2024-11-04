@@ -6,4 +6,3 @@ src/tmp/*
 .vscode
 .DS_Store
 .idea
-.env
