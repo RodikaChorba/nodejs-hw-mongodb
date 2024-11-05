@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import contactsRouter from './contacts.js';
 import authRouter from './auth.js';
-import emailRouter from './emailRoutes.js'; // Імпортуємо як значення за замовчуванням
+import emailRouter from './emailRoutes.js';
 
 const router = Router();
 
