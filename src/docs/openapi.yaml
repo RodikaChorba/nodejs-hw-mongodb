@@ -12,7 +12,8 @@ tags:
   - name: Auth
     description: Operations about user authentication
 servers:
-  - url: https://nodejs-hw-mongodb-3-06yw.onrender.com/api/v1
+  - url: http://localhost:3000
+  - url: https://mycontactsapp.onrender.com
 paths:
   /auth/register:
     post:
