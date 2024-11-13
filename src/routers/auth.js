@@ -52,5 +52,4 @@ router.post('/logout', ctrlWrapper(logoutUserController));
 router.post('/refresh', ctrlWrapper(refreshUserSessionController));
 
 router.get('/get-oauth-url', ctrlWrapper(getGoogleOAuthUrlController));
-
 export default router;

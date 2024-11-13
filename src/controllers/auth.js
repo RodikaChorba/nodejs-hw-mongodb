@@ -177,3 +177,12 @@ export const loginWithGoogleController = async (req, res) => {
     },
   });
 };
+
+export const searchUserController = (req, res) => {
+  const { name } = req.query;
+  if (name) {
+    res.json({ message: `Searching for user with name: ${name}` });
+  } else {
+    res.status(400).json({ message: 'Name query parameter is missing' });
+  }
+};

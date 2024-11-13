@@ -234,7 +234,7 @@
     "/contacts": {
       "get": {
         "tags": [
-          "contacts"
+          "Contacts"
         ],
         "operationId": "getContacts",
         "summary": "Get all contacts",
@@ -351,7 +351,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "664ca67erae7f10c88b598y"
             }
           }
         ],
