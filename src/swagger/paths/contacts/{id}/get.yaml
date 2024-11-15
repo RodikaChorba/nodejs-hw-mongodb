@@ -11,7 +11,52 @@ parameters:
     required: true
     schema:
       type: string
-      example: '65ca67e7ae7f10c88b598384'
+      example: '664ca67erae7f10c88b598y'
+  - in: query
+    name: page
+    required: false
+    schema:
+      type: integer
+      default: 1
+      minimum: 1
+    description: The page number for pagination. Defaults to 1.
+  - in: query
+    name: perPage
+    required: false
+    schema:
+      type: integer
+      default: 10
+      minimum: 1
+    description: The number of items per page for pagination. Defaults to 10.
+  - in: query
+    name: sortBy
+    required: false
+    schema:
+      type: string
+      default: '_id'
+    description: The field to sort the results by. Defaults to '_id'.
+  - in: query
+    name: sortOrder
+    required: false
+    schema:
+      type: string
+      enum: [asc, desc]
+      default: 'asc'
+    description: The order of sorting. Can be 'asc' or 'desc'. Defaults to 'asc'.
+  - in: query
+    name: isFavorite
+    required: false
+    schema:
+      type: boolean
+    description: Filters results to include only favorite items if true.
+  - in: query
+    name: contactType
+    required: false
+    schema:
+      type: string
+      enum: [home, personal, work]
+      default: 'home'
+    description: Filters results by contact type. Defaults to an empty string, meaning no filter.
 responses:
   '200':
     description: 'Get contact by id'
@@ -29,9 +74,9 @@ responses:
               example: 200
             message:
               type: string
-              example: Successfully found contact with id 65ca67e7ae7f10c88b598384!
+              example: Successfully found contact with id 67273b9b68409d5240f62ed7!
             data:
               type: object
               $ref: '../../../components/schemas/contact.yaml'
-  '401':
-    $ref: '../../../components/responses/401.yaml'
+  '404':
+    $ref: '../../../components/responses/404.yaml'

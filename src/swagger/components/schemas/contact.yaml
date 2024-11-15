@@ -3,14 +3,12 @@ required:
   - _id
   - name
   - phoneNumber
-  - email
-  - isFavourite
   - contactType
 properties:
   _id:
     description: "Contact's id"
     type: string
-    example: 65e4decdd286b30065d54af9
+    example: 664ca67erae7f10c88b598y
   name:
     description: "Contact's name"
     type: string
@@ -18,24 +16,23 @@ properties:
   phoneNumber:
     description: "Contact's phone number"
     type: number
-    example: 123113355
+    example: 123123123
+  contactType:
+    description: "Contact's type"
+    type: string
+    enum: ['work', 'home', 'personal']
   email:
     description: "Contact's email"
     type: string
   isFavourite:
-    description: "Contact's status"
+    description: 'Is contact favourite or not'
     type: boolean
-    example: true
-  contactType:
-    description: 'Contact type'
-    type: string
-    enum: ['work', 'fhome', 'personal']
-    example: personal
+    example: false
   userId:
-    description: "User's id"
+    description: 'Contact shows only to user with this id'
     type: string
-    example: 65e4decdd286b30065d54af9
+    example: 671b9f649de31bc33ce7bcf9
   photo:
     description: "Link to contact's photo"
     type: string
-    example: https://res.cloudinary.com/uqwgdu/image/upload/image.png
+    example: https://res.cloudinary.com/dsp7xc3fh/image/upload/v1730624509/kzkhsbcokzfcxanrr4hf.png
